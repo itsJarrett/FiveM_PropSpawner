@@ -10,17 +10,10 @@ version "1.0.0"
 
 ui_page("nui/index.html")
 
-files({
-  "nui/index.html",
-  "nui/style.css",
-  "nui/script.js"
-})
-
 server_scripts {
   "sv_propspawner.lua"
 }
 
 client_scripts {
-  "cl_propspawner.lua",
-  "cl_propspawner_ui.lua"
+  "cl_propspawner.lua"
 }
