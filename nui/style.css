@@ -1,0 +1,31 @@
+html, body, .grid-container { height: 100%; margin: 0; }
+
+.grid-container * { 
+ position: relative;
+}
+
+.grid-container *:after { 
+ content:attr(class);
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1px 1fr 1fr 1fr 1fr;
+  grid-template-areas: "nav nav nav nav nav nav" "nav nav nav nav nav nav" "propList . . . . ." "propList . . . . ." "propList . . . . .";
+}
+
+.nav { 
+  grid-area: nav; 
+  background-color: rgba(60, 60, 60, 0.6);
+  text-align: center;
+}
+
+.navWrapper {
+  margin-top: 10px;
+}
+
+.propList { grid-area: propList; }
